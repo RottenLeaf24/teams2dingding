@@ -1,0 +1,9 @@
+microsoftgraph:
+  "authority": "https://login.microsoftonline.com/organizations"
+  "client_id": "The application client id"
+  "username": "Your username in your organization"
+  "password": ""
+  "scope": ["User.ReadBasic.All",'Chat.ReadBasic', 'Chat.Read', 'Chat.ReadWrite']
+teamschat:
+  group: ["Chat group name1","Chat group name2"]
+  oneonone: ["username1@organization.com","username2@organization.com"]
