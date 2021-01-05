@@ -1,0 +1,2 @@
+# teams2dingding
+将teams的消息转发到钉钉，解决teams不能正常推送的问题
