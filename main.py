@@ -1,4 +1,3 @@
-# coding=gbk
 import getTeamsMsg
 import s2dingding
 import time
@@ -14,7 +13,7 @@ def trans_msg():
         msg_list = json_msg[chat]
         if len(msg_list) != 0:
             for msg in reversed(msg_list):
-                send_msg = "%s£º\n%s"%(chat,str(msg).strip('{').strip('}'))
+                send_msg = "%sï¼š\n%s"%(chat,str(msg).strip('{').strip('}'))
                 s2dingding.s2dd(send_msg)
 
 
