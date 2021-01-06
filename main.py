@@ -25,9 +25,9 @@ def running_plan():
     today = datetime.date.today()
     workday = is_workday(today)
     if workday:
-        scheduler.add_job(trans_msg, 'cron', hour='0-8,18-23', second='0,10,20,30,40,50', id='msg', max_instances=3)
+        scheduler.add_job(trans_msg, 'cron', hour='0-8,18-23', second='*/10', id='msg', max_instances=3)
     else:
-        scheduler.add_job(trans_msg, 'cron', hour='0-23', second='0,10,20,30,40,50', id='msg', max_instances=3)
+        scheduler.add_job(trans_msg, 'cron', hour='0-23', second='*/10', id='msg', max_instances=3)
 
 scheduler.add_job(running_plan, 'cron', hour='0', id='iswork')
 running_plan()
